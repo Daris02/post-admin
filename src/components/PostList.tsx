@@ -7,11 +7,12 @@ export default function PostList(): JSX.Element {
             <Datagrid>
                 <TextField source="id"/>
                 <TextField source="title"/>
-                <FunctionField
-                    source="userId"
-                    label="User name"
-                    render={User}
-                />
+                <TextField source="userId"/>
+                {/*<FunctionField*/}
+                {/*    source="userId"*/}
+                {/*    label="User name"*/}
+                {/*    render={User}*/}
+                {/*/>*/}
                 <CommentButton />
             </Datagrid>
         </List>

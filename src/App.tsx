@@ -4,7 +4,6 @@ import {
     EditGuesser,
 } from "react-admin";
 import { dataProvider } from "./dataProvider";
-import { Route } from "react-router-dom";
 import PostList from "./components/PostList";
 
 export const App = () => (
@@ -14,8 +13,6 @@ export const App = () => (
       list={PostList}
       edit={EditGuesser}
       recordRepresentation="name"
-    >
-        {/*<Route path=":userId/name" />*/}
-    </Resource>
+    />
   </Admin>
 );

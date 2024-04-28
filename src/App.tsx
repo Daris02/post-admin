@@ -1,21 +1,19 @@
-import {
-    Admin,
-    Resource,
-    EditGuesser,
-} from "react-admin";
+import { Admin, Resource } from "react-admin";
 import { dataProvider } from "./dataProvider";
-import { Route } from "react-router-dom";
 import PostList from "./components/PostList";
+import CommentList from "./components/CommentList";
 
 export const App = () => (
   <Admin dataProvider={dataProvider}>
     <Resource
       name="posts"
       list={PostList}
-      edit={EditGuesser}
       recordRepresentation="name"
-    >
-        {/*<Route path=":userId/name" />*/}
-    </Resource>
+    />
+    <Resource
+      name="comments"
+      list={CommentList}
+      recordRepresentation="name"
+    />
   </Admin>
 );

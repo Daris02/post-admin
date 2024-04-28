@@ -1,5 +1,4 @@
-import {Datagrid, FunctionField, List, TextField, useRecordContext} from "react-admin";
-import CommentButton from "./CommentButton";
+import { Datagrid, List, TextField } from "react-admin";
 
 export default function PostList(): JSX.Element {
     return (
@@ -7,20 +6,8 @@ export default function PostList(): JSX.Element {
             <Datagrid>
                 <TextField source="id"/>
                 <TextField source="title"/>
-                <FunctionField
-                    source="userId"
-                    label="User name"
-                    render={User}
-                />
-                <CommentButton />
+                <TextField source="userId"/>
             </Datagrid>
         </List>
     );
 };
-
-const User = () => {
-    const record = useRecordContext();
-    if (!record) return null;
-    return <>{record.name}</>;
-};
-
